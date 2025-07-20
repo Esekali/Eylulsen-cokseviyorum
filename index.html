@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eylulsenicokseviyorum</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Quicksand', sans-serif; background: #fce4ec; text-align: center; padding: 20px; }
+    .title { font-family: 'Pacifico', cursive; font-size: 2em; color: #c2185b; }
+    .quote { font-style: italic; margin: 20px 0; color: #d81b60; }
+    .button { margin: 10px; padding: 10px 20px; background: #f48fb1; color: white; border: none; border-radius: 20px; }
+    .images img { width: 150px; margin: 10px; border-radius: 10px; }
+    #letter { display: none; background: #fff0f5; padding: 20px; border-radius: 15px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="title">eylulsenicokseviyorum</div>
+  <div class="quote">“Yaşayan, kokan, acıyan; en çok da özleyen bir aşk benimkisi.”</div>
+  <a href="https://music.youtube.com/playlist?list=PLUjuH33KBQ43tzOO8kJW_1klYiNrDFeWZ&feature=shared" target="_blank" class="button">🎵 Eylül için playlist</a>
+  <div>
+    <button class="button" onclick="showImage()">Sürpriz!</button>
+    <button class="button" onclick="toggleLetter()">Eylül’e küçük bir mektup</button>
+  </div>
+  <div class="images" id="image-area"></div>
+  <div id="letter">
+    <p>Eylül,<br>
+    Bu siteyi senin için hazırladım.<br>
+    Seni düşündüğüm her an, bu pastel kalpler, bu minik kediler gibi içim ısınıyor.<br><br>
+    Seni çok seviyorum.<br><br>
+    Her tıklamada, her gülüşünde bir parçam daha seviniyor.<br><br>
+    — eşekali</p>
+  </div>
+  <script>
+    const images = ["img/1.jpg","img/2.jpg","img/3.jpg","img/4.jpg","img/5.jpg","img/6.jpg","img/7.jpg"];
+    function showImage() {
+      const i = Math.floor(Math.random() * images.length);
+      document.getElementById("image-area").innerHTML = '<img src="'+images[i]+'" />';
+    }
+    function toggleLetter() {
+      const l = document.getElementById("letter");
+      l.style.display = l.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
+</body>
+</html>
